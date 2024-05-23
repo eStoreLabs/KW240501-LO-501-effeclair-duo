@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="ee">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Effaclar</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/cnc6cbd.css" />
+  <style>
+    @import url("https://use.typekit.net/cnc6cbd.css");
+
+:root {
+  --es-blue-accent: #009fe3;
+}
+
+/* Locator Web Light */
+@font-face {
+  font-family: "LocatorWeb";
+  src: url("assets/fonts/LocatorWebLight/LocatorWebLight.eot");
+  src: url("assets/fonts/LocatorWebLight/LocatorWebLight.eot?#iefix") format("embedded-opentype"), url("assets/fonts/LocatorWebLight/LocatorWebLight.woff2") format("woff2"), url("assets/fonts/LocatorWebLight/LocatorWebLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* Locator Web Medium */
+@font-face {
+  font-family: "LocatorWeb";
+  src: url("assets/fonts/LocatorWebMedium/LocatorWebMedium.eot");
+  src: url("assets/fonts/LocatorWebMedium/LocatorWebMedium.eot?#iefix") format("embedded-opentype"), url("assets/fonts/LocatorWebMedium/LocatorWebMedium.woff2") format("woff2"), url("assets/fonts/LocatorWebMedium/LocatorWebMedium.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*Futura PT Demi  */
+@font-face {
+  font-family: 'FuturaPT';
+  src: url("assets/fonts/FuturaPTDemi.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*Futura PT Book  */
+@font-face {
+  font-family: 'FuturaPT';
+  src: url("assets/fonts/FuturaPTBook.otf");
+  font-weight: 200;
+  font-style: normal;
+}
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+strong {
+  font-weight: 500;
+}
+
+#es-laroche.es-laroche {
+  font-family: "FuturaPT", sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 1.2;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  color: #000;
+  background: #fff;
+}
+
+#es-laroche.es-laroche * {
+  box-sizing: border-box;
+}
+
+#es-laroche.es-laroche h2,
+#es-laroche.es-laroche h3,
+#es-laroche.es-laroche h4,
+#es-laroche.es-laroche h5 {
+  font-family: "FuturaPT", sans-serif;
+  color: #000;
+}
+
+#es-laroche.es-laroche .es-mobile-break {
+  display: inline-block;
+}
+
+#es-laroche.es-laroche .es-kv {
+  position: relative;
+}
+
+#es-laroche.es-laroche .es-kv__logo {
+  padding-left: 5%;
+  padding-bottom: 20px;
+}
+
+#es-laroche.es-laroche .es-kv__logo img {
+  display: block;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+#es-laroche.es-laroche .es-kv__logo-2 {
+  position: relative;
+  padding-left: 5%;
+  padding-bottom: 20px;
+}
+
+#es-laroche.es-laroche .es-kv__logo-2 img {
+  display: block;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+#es-laroche.es-laroche .es-kv__logo-2--desc {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: "FuturaPT";
+  font-weight: inherit;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#es-laroche.es-laroche .es-kv__wrapper {
+  min-height: 290px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#es-laroche.es-laroche .es-kv__left {
+  padding-bottom: 10px;
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 0.8;
+  font-family: "FuturaPT", sans-serif;
+  opacity: 0;
+  animation: slideright 0.8s ease forwards;
+  animation-delay: 0.9s;
+}
+
+#es-laroche.es-laroche .es-kv__left span {
+  font-size: 15px;
+  font-weight: 200;
+  
+}
+
+#es-laroche.es-laroche .es-kv__packshot {
+  padding-bottom: 20px;
+  width: 10%;
+}
+
+#es-laroche.es-laroche .es-kv__packshot--image {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  min-width: 140px;
+  padding-left: 20px;
+}
+
+#es-laroche.es-laroche .es-kv__right {
+  opacity: 0;
+  animation: slideleft 0.8s ease forwards;
+  animation-delay: 0.9s;
+}
+
+#es-laroche.es-laroche .es-kv__title {
+  margin: 20px auto 0 auto;
+  padding: 5px 10px;
+  background-color: #009de5;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 200;
+  font-family: "FuturaPT", sans-serif;
+  opacity: 0;
+  animation: slideright 0.8s ease forwards;
+  animation-delay: 0.9s;
+}
+
+#es-laroche.es-laroche .es-kv__nr1 {
+  max-width: 260px;
+}
+
+#es-laroche.es-laroche .es-kv__image {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin: 0;
+  width: 50px;
+  height: 50px;
+}
+
+#es-laroche.es-laroche .es-kv__text {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  text-transform: uppercase;
+  font-family: "FuturaPT", sans-serif;
+  text-align: left;
+  font-size: 13px;
+}
+
+#es-laroche.es-laroche .es-kv__text span {
+  font-family: "FuturaPT", sans-serif;
+}
+
+#es-laroche.es-laroche .es-desc {
+  margin: 32px auto;
+  text-align: center;
+}
+
+#es-laroche.es-laroche .es-desc__title {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+#es-laroche.es-laroche .es-desc__title--subtitle {
+  font-size: 18px;
+  font-weight: 200;
+}
+
+#es-laroche.es-laroche .es-desc__wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#es-laroche.es-laroche .es-desc__single {
+  width: 230px;
+  margin: 20px 0;
+  transition: all 0.3s;
+}
+
+#es-laroche.es-laroche .es-desc__single p {
+  font-size: 13px;
+}
+
+#es-laroche.es-laroche .es-desc__single:hover {
+  transform: translateY(15px);
+}
+
+#es-laroche.es-laroche .es-desc__item {
+  text-transform: uppercase;
+  font-family: "FuturaPT", sans-serif;
+  font-weight: 600;
+}
+
+#es-laroche.es-laroche .es-micro {
+  position: relative;
+}
+
+#es-laroche.es-laroche .es-micro__img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+#es-laroche.es-laroche .es-micro__content {
+  background-color: #fff;
+  text-align: center;
+  padding: 30px;
+}
+
+#es-laroche.es-laroche .es-micro__title {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+#es-laroche.es-laroche .es-micro__title span {
+  font-family: "FuturaPT", sans-serif;
+  font-weight: 600;
+}
+
+#es-laroche.es-laroche .es-micro__text {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 15px;
+  font-weight: 100;
+  margin-top: 15px;
+}
+
+#es-laroche.es-laroche .es-micro__text2 {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 15px;
+  color: #009ee2;
+}
+
+#es-laroche.es-laroche .es-micro__text2--black {
+  color: #000;
+}
+
+#es-laroche.es-laroche .es-effect {
+  min-height: 262px;
+}
+
+#es-laroche.es-laroche .es-effect__container {
+  margin-left: 0;
+  padding: 25px 15px;
+  max-width: 510px;
+  text-align: center;
+}
+
+#es-laroche.es-laroche .es-effect__title {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  padding-bottom: 20px;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+#es-laroche.es-laroche .es-effect__title span {
+  font-family: "FuturaPT", sans-serif;
+  font-weight: 600;
+}
+
+#es-laroche.es-laroche .es-effect__blue {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  margin-top: 25px;
+  font-size: 48px;
+  font-weight: 900;
+  color: #009fe3;
+  text-transform: uppercase;
+  line-height: 0.7;
+}
+
+#es-laroche.es-laroche .es-effect__blue span {
+  color: #000;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 0.5;
+}
+
+#es-laroche.es-laroche .es-effect__text {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+#es-laroche.es-laroche .es-effect__text span {
+  font-weight: 900;
+}
+
+#es-laroche.es-laroche .es-effect__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 0 15px;
+}
+
+#es-laroche.es-laroche .es-effect__single {
+  margin: 15px auto;
+  max-width: 150px;
+  font-size: 13px;
+}
+
+#es-laroche.es-laroche .es-effect__single-wide {
+  max-width: 220px;
+}
+
+#es-laroche.es-laroche .es-effect__item {
+  margin: 0;
+  font-family: "FuturaPT", sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  color: #000;
+}
+
+#es-laroche.es-laroche .es-effect__percent {
+  margin: 0;
+  font-size: 12px;
+  color: #009fe3;
+  font-weight: 600;
+}
+
+#es-laroche.es-laroche .es-effect__percent span {
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+}
+
+#es-laroche.es-laroche .es-effect__percent span sup {
+  font-family: "FuturaPT", sans-serif;
+  font-size: 55%;
+}
+
+#es-laroche.es-laroche .es-ingr {
+  margin: 42px 0;
+  text-align: center;
+}
+
+#es-laroche.es-laroche .es-ingr__title {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+#es-laroche.es-laroche .es-ingr__title span {
+  font-family: "FuturaPT", sans-serif;
+  font-weight: 600;
+}
+
+#es-laroche.es-laroche .es-ingr__wrapper {
+  margin: 20px auto 0;
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px 2px;
+}
+
+#es-laroche.es-laroche .es-ingr__single {
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  max-width: 142px;
+}
+
+#es-laroche.es-laroche .es-ingr__single:hover .es-ingr__image {
+  transform: scale(1.1);
+}
+
+#es-laroche.es-laroche .es-ingr__img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin: 10px auto;
+  transition: all 0.3s;
+}
+
+#es-laroche.es-laroche .es-ingr__image {
+  position: relative;
+  transition: all 0.3s;
+}
+
+#es-laroche.es-laroche .es-ingr__label {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  padding: 10px 7px 0;
+  background: rgba(255, 255, 255, 0.66);
+  position: absolute;
+  width: 80%;
+  height: 46px;
+  top: 14%;
+  left: 0;
+  font-size: 13px;
+  line-height: 1.1;
+  font-family: "FuturaPT", sans-serif;
+  font-weight: 500;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+#es-laroche.es-laroche .es-ingr__label span {
+  padding: 0;
+  margin: 0;
+  line-height: 0.9;
+  font-size: 11px;
+  font-weight: 200;
+}
+
+#es-laroche.es-laroche .es-ingr__desc {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 13px;
+  font-weight: 100;
+  text-align: left;
+}
+
+#es-laroche.es-laroche .es-ingr__item {
+  max-width: 135px;
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  margin: 0 auto;
+  font-size: 11px;
+  text-transform: none;
+  font-family: "FuturaPT", sans-serif;
+  font-weight: 100;
+  text-align: left;
+}
+
+#es-laroche.es-laroche .es-cross {
+  margin: 20px auto;
+  text-align: center;
+}
+
+#es-laroche.es-laroche .es-cross__title {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  margin: 20px 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+#es-laroche.es-laroche .es-cross__title--main {
+  font-size: 28px;
+}
+
+#es-laroche.es-laroche .es-cross__title span {
+  font-family: "FuturaPT", sans-serif;
+  font-weight: 600;
+}
+
+#es-laroche.es-laroche .es-cross__container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#es-laroche.es-laroche .es-cross__single {
+  max-width: 250px;
+  margin-bottom: 20px;
+}
+
+#es-laroche.es-laroche .es-cross__single:hover .es-cross__link::before {
+  transform: scaleX(1);
+}
+
+#es-laroche.es-laroche .es-cross__single:hover .es-cross__image {
+  transform: translateY(-8px);
+}
+
+#es-laroche.es-laroche .es-cross__number {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  color: #009ee3;
+  font-family: "LocatorWeb", sans-serif;
+  font-weight: 700;
+  font-size: 160px;
+  margin: 0 10px;
+}
+
+#es-laroche.es-laroche .es-cross__image {
+  transition: transform 0.3s;
+  margin-bottom: 24px;
+  max-height: 350px;
+}
+
+#es-laroche.es-laroche .es-cross__image img {
+  max-width: none;
+}
+
+#es-laroche.es-laroche .es-cross__desc {
+  max-width: 250px;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+#es-laroche.es-laroche .es-cross__link {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  position: relative;
+  display: inline-block;
+  padding: 7px 20px;
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  background: #009ee3;
+  transition: color 0.3s ease-in-out;
+  z-index: 1;
+}
+
+#es-laroche.es-laroche .es-cross__link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #000;
+  transition: transform 0.3s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+#es-laroche.es-laroche .es-obligations {
+  width: 95%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+#es-laroche.es-laroche .es-obligations__title {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: "LocatorWeb", sans-serif;
+  font-weight: inherit;
+  margin: 20px 10px;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+#es-laroche.es-laroche .es-obligations__title span {
+  font-family: "LocatorWeb", sans-serif;
+  font-weight: 500;
+}
+
+#es-laroche.es-laroche .es-obligations__wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 10px;
+}
+
+#es-laroche.es-laroche .es-obligations__single {
+  width: 320px;
+  overflow: hidden;
+  position: relative;
+}
+
+#es-laroche.es-laroche .es-obligations__single:hover .es-obligations__image {
+  transform: scale(1.2);
+}
+
+#es-laroche.es-laroche .es-obligations__label {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  width: 100%;
+  text-align: left;
+  padding: 4px 10px;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+  font-family: "LocatorWeb", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+#es-laroche.es-laroche .es-obligations__image {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  transition: all 0.3s;
+}
+
+#es-laroche.es-laroche .es-footer {
+  margin: 32px auto;
+}
+
+#es-laroche.es-laroche .es-footer p {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .es-micro__content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    width: 420px;
+  }
+
+  .es-cross {
+    position: relative;
+  }
+
+  .es-cross__container {
+    width: 768px;
+    height: 1156px;
+    background: url("assets/img/bg-cross.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  .es-cross__image {
+    display: none;
+  }
+
+  .es-cross__number {
+    margin: 0 0 !important;
+    max-height: 160px !important;
+  }
+
+  .es-cross__title {
+    margin: 0 0 10px 0 !important;
+    font-size: 20px;
+  }
+
+  .es-cross__title--main {
+    position: absolute;
+    width: 76%;
+    font-size: 28px;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+  }
+
+  .es-cross__desc {
+    padding: 0;
+    max-width: 169px;
+  }
+
+  .es-cross__single {
+    max-width: 200px;
+    position: absolute;
+    text-align: left;
+  }
+
+  .es-cross__single--1 {
+    left: 40px;
+    top: 150px;
+  }
+
+  .es-cross__single--2 {
+    right: 40px;
+    top: 492px;
+  }
+
+  .es-cross__single--3 {
+    left: 40px;
+    top: 701px;
+  }
+
+  .es-effect {
+    background: url("assets/img/bg-effect.png") no-repeat;
+    background-size: cover;
+    background-position: right;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #es-laroche.es-laroche .es-effect__container {
+    width: 100%;
+    margin-left:auto;
+    margin-right: auto;
+  }
+
+  #es-laroche.es-laroche .es-cross__single {
+    max-width: 20%;
+  }
+}
+
+@media screen and (min-width: 659px) {
+  .es-use {
+    margin: 32px auto;
+  }
+
+  .es-use__container {
+    position: relative;
+    min-height: 334px;
+  }
+
+  .es-use__wrapper {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .es-use__left {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 5;
+    width: 60% !important;
+  }
+
+  .es-kv__logo-2 {
+    position: absolute !important;
+    right: 5%;
+    top: 0;
+  }
+}
+
+@media screen and (min-width: 535px) {
+  .es-mobile-break {
+    display: none !important;
+  }
+
+  .es-kv__logo {
+    padding-bottom: 0;
+  }
+
+  .es-kv__logo img {
+    margin: 0 !important;
+  }
+
+  .es-kv__title {
+    margin: 40px 0 0 auto !important;
+  }
+
+  .es-kv__wrapper {
+    background-image: url("assets/img/bg-kv.png");
+    background-position: top 0 right 0;
+    background-size: 50% auto;
+    background-repeat: no-repeat;
+    justify-content: space-around;
+  }
+
+  .es-kv__left {
+    padding-bottom: 0;
+    order: 1;
+    width: 40%;
+  }
+
+  .es-kv__left p {
+    text-align: right;
+  }
+
+  .es-kv__packshot {
+    padding-bottom: 0 !important;
+    order: 2;
+  }
+
+  .es-kv__packshot--image {
+    min-width: 100px !important;
+  }
+
+  .es-kv__right {
+    width: 40%;
+    order: 3;
+    text-align: center;
+  }
+
+  .es-effect__container {
+    margin-left: 2%;
+  }
+}
+
+@keyframes slideright {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideleft {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 442px) {
+  #es-laroche.es-laroche .es-kv__packshot {
+    width:100%; 
+  }
+
+  #es-laroche.es-laroche .es-kv__packshot--image {
+      padding-left: 0;
+      min-width: 100px;
+  }
+  #es-laroche.es-laroche .es-kv__left {
+      text-align: center;
+  }
+  #es-laroche.es-laroche .es-ingr__single {
+      max-width: 60%;
+  }
+
+  #es-laroche.es-laroche .es-effect__single-wide {
+      flex-basis: 100%;
+  }
+  #es-laroche.es-laroche .es-cross__single {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #es-laroche.es-laroche .es-cross__desc {
+      max-width: 30%;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+}
+
+@media screen and (min-width: 1250px) {
+  #es-laroche.es-laroche .es-kv__logo {
+    padding-left: 120px;
+  }
+
+  #es-laroche.es-laroche .es-kv__logo img {
+    max-width: 250px;
+  }
+
+  #es-laroche.es-laroche .es-kv__logo-2 img {
+    max-width: 320px;
+  }
+
+  #es-laroche.es-laroche .es-kv__logo-2--desc {
+    font-size: 18px;
+  }
+
+  #es-laroche.es-laroche .es-kv__container {
+    padding-bottom: 40px;
+  }
+
+  #es-laroche.es-laroche .es-kv__wrapper {
+    min-height: 350px;
+    padding-top: 40px;
+    background-position: top -18px right 35px;
+    background-size: 42%;
+  }
+  #es-laroche.es-laroche .es-kv__left {
+    font-size: 42px;
+  }
+  #es-laroche.es-laroche .es-kv__left span {
+    font-size: 22px;
+  }
+  #es-laroche.es-laroche .es-kv__left span sup{
+    font-size: 14px;
+  }
+  #es-laroche.es-laroche .es-kv__packshot--image {
+    height: 350px;
+  }
+
+  #es-laroche.es-laroche .es-kv__nr1 {
+    max-width: 250px;
+  }
+
+  #es-laroche.es-laroche .es-kv__right {
+    padding-right: 200px;
+  }
+
+  #es-laroche.es-laroche .es-desc__title, #es-laroche.es-laroche .es-micro__title, #es-laroche.es-laroche .es-ingr__title, #es-laroche.es-laroche .es-effect__title {
+    font-size: 40px;
+  }
+  #es-laroche.es-laroche .es-desc__title {
+    margin-bottom: 60px;
+  }
+  #es-laroche.es-laroche .es-desc__single p {
+    font-size: 18px;
+  }
+
+  #es-laroche.es-laroche .es-desc {
+    margin-bottom: 40px;
+  }
+  #es-laroche.es-laroche .es-micro__content {
+    height: 512px;
+    width: 640px;
+    margin-right: 20px;
+  }
+  #es-laroche.es-laroche .es-micro__title {
+    margin-bottom: 25px;
+    margin-top: 25px
+  }
+  #es-laroche.es-laroche .es-micro__text {
+    font-size: 27px;
+    margin-bottom: 25px;
+  }
+  #es-laroche.es-laroche .es-micro__text2 {
+    font-size: 27px;
+  }
+  #es-laroche.es-laroche .es-ingr__wrapper {
+    width: 87%;
+  }
+  #es-laroche.es-laroche .es-ingr__title {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  #es-laroche.es-laroche .es-ingr__single {
+    max-width: 210px;
+  }
+
+  #es-laroche.es-laroche .es-ingr__label {
+    font-size: 27px;
+    width: 90%;
+    height: 65px;
+    padding-top: 16px;
+  }
+  #es-laroche.es-laroche .es-ingr__label#ingr-small{
+    font-size: 23px;
+  }
+  #es-laroche.es-laroche .es-ingr__label#ingr-padding-small{
+    padding-top: 2px;
+  }
+
+  #es-laroche.es-laroche .es-ingr__desc {
+    font-size: 19px;
+  }
+  #es-laroche.es-laroche .es-effect {
+    height: 860px;
+  }
+
+  #es-laroche.es-laroche .es-effect__container {
+    max-width: 800px;
+  }
+  #es-laroche.es-laroche .es-effect__title {
+      margin-top: 50px;
+      margin-bottom: 30px;
+  }
+  #es-laroche.es-laroche .es-effect__wrapper#effect-first-wrapper {
+    margin-bottom: 30px;
+  }
+  #es-laroche.es-laroche .es-effect__single-wide {
+    max-width: 255px;
+  }
+
+  #es-laroche.es-laroche .es-effect__blue {
+    font-size: 52px;
+  }
+  #es-laroche.es-laroche .es-effect__text#effect-text-left {
+    text-align: left;
+  }
+
+  #es-laroche.es-laroche .es-effect__blue span {
+    font-size: 26px;
+  }
+  #es-laroche.es-laroche .es-effect__text {
+    font-size: 24px;
+    margin-top: 30px;
+  }
+  #es-laroche.es-laroche .es-effect__text sup, #es-laroche.es-laroche .es-effect__text#effect-text-left sup,  #es-laroche.es-laroche .es-effect__item sup {
+    font-size: 16px;
+  }
+  #es-laroche.es-laroche .es-effect__percent span {
+      font-size: 45px;
+  }
+
+  #es-laroche.es-laroche .es-effect__item {
+    font-size: 24px;
+  }
+
+  #es-laroche.es-laroche .es-cross__title--main { 
+      font-size: 42px;
+  }
+  #es-laroche.es-laroche .es-cross__single {
+    max-width: 250px;
+  }
+  #es-laroche.es-laroche .es-cross__number {
+    font-size: 190px;
+  }
+  #es-laroche.es-laroche .es-cross__title {
+    font-size: 40px;
+    padding-top: 30px;
+    line-height: 1;
+  }
+
+  #es-laroche.es-laroche .es-cross__desc {
+    font-size: 18px;
+  }
+  .es-cross__container {
+    width: 1250px;
+    height: 1740px;
+  }
+  .es-cross__single--1 {
+    left: 190px;
+    top: 252px;
+  }
+  .es-cross__single--2 {
+    right: 162px;
+    top: 773px;
+  }
+  .es-cross__single--3 {
+    left: 210px;
+    top: 1047px;
+  }
+
+  #es-laroche.es-laroche .es-obligations__title {
+    font-size: 42px;
+  }
+  #es-laroche.es-laroche .es-obligations__single {
+    width: 460px;
+  }
+  #es-laroche.es-laroche .es-obligations__label {
+    padding-left: 20px;
+    padding-bottom: 10px;
+  }
+
+  #es-laroche.es-laroche .es-footer p {
+    font-size: 12px;
+  }
+
+}
+
+@media screen and (max-width: 1249px) {
+  #es-laroche.es-laroche {
+    max-width: 768px;
+  
+  }
+
+  #es-laroche.es-laroche .es-effect__blue {
+    font-size: 42px;
+  }
+
+  .es-cross__single--1 {
+    left: 96px;
+    top: 199px;
+  }
+  .es-cross__single--2 {
+    right: -12px;
+    top: 506px;
+  }
+  .es-cross__single--3 {
+    left: 64px;
+    top: 714px;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <div class="es-laroche" id="es-laroche">
+    <div class="es-kv">
+      <div class="es-kv__logo">
+        <img src="assets/img/logo-laroche.png" alt="La roche logo">
+      </div>
+      <div class="es-kv__logo-2">
+        <img src="assets/img/logo2.png" alt="La roche logo">
+        <p class="es-kv__logo-2--desc">PAREM ELU OMA NAHAS</p>
+      </div>
+      <div class="es-kv__container">
+        <div class="es-kv__wrapper">
+          <div class="es-kv__packshot">
+            <img src="assets/img/packshot.png" alt="" class="es-kv__packshot--image">
+          </div>
+          <div class="es-kv__left">
+            <p>
+              <strong>Effaclar DUO+M</strong><br>
+              <span>Tulemus juba 8 tunni<br>
+                möödudes1<sup>1</sup></span>
+            </p>
+          </div>
+
+          <div class="es-kv__right">
+            <img src="assets/img/logo-nr1.png" alt="La roche logo" class="es-kv__nr1">
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="es-desc">
+      <h3 class="es-desc__title">
+        <strong>KOLMEKORDSE TOIMEGA KREEM:</strong><br>
+      </h3>
+
+      <div class="es-desc__wrapper">
+        <div class="es-desc__single">
+          <img src="assets/img/description-item.png" alt="">
+          <p class="es-desc__item">
+            komedoonide ja<br>vistrike vastu
+          </p>
+        </div>
+        <div class="es-desc__single">
+          <img src="assets/img/description-item.png" alt="">
+          <p class="es-desc__item">
+            aknejälgede<br>vastu
+          </p>
+        </div>
+        <div class="es-desc__single">
+          <img src="assets/img/description-item.png" alt="">
+          <p class="es-desc__item">
+            takistab uute<br>
+            ebatäiuste tekkimist<br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="es-micro">
+      <img src="assets/img/bg-micro.png" alt="" class="es-micro__img">
+      <div class="es-micro__content">
+        <p class="es-micro__title"><span>LÄBIMURRE TEADMISTES</span><br>NAHA MIKROBIOOMI KOHTA</p>
+        <p class="es-micro__text">Naha häiritud mikrobioom põhjustab aknesümptomite teket ja süvenemist, sealhulgas
+          IA1-tüüpi bakterite C. acnes paljunemist. Seetõttu on naha mikrobioomi tasakaalu hoidmine erakordselt oluline selleks, et 
+          säilitada naha terve välimus.
+        </p>
+        <p class="es-micro__text2"> <span
+          class="es-micro__text2--black">Selleks oleme välja töötanud toote, mis on rikastatud koostisosaga</span> PHYLOBIOMA<span
+          class="es-micro__text2--black">, mis pidurdab tõhusalt IA1-tüüpi bakterite C. acnes
+          paljunemist.</span></p>
+      </div>
+
+    </div>
+
+    <div class="es-ingr">
+      <h3 class="es-ingr__title"><span>TOIMEAINED</span></h3>
+      <div class="es-ingr__wrapper">
+        <div class="es-ingr__single">
+          <div class="es-ingr__image">
+            <p class="es-ingr__label">
+              <strong>phylobioma</strong><br>
+            </p>
+            <img src="assets/img/ingr-1.png" alt="" class="es-ingr__img">
+          </div>
+          <p class="es-ingr__desc">Aitab leevendada ja vähendada ebatäiusi, takistades akne<br>
+            ägenemist põhjustavate bakterite C. acnes IA1 paljunemist.
+          </p>
+        </div>
+        <div class="es-ingr__single">
+          <div class="es-ingr__image">
+            <p class="es-ingr__label">
+              <strong>Procerad</strong><br>
+            </p>
+            <img src="assets/img/ingr-2.png" alt="" class="es-ingr__img">
+          </div>
+          <p class="es-ingr__desc">Patenditud keramiid aknejälgede vastu.
+          </p>
+        </div>
+        <div class="es-ingr__single">
+          <div class="es-ingr__image">
+            <p class="es-ingr__label" id="ingr-small">
+              <strong>NIATSIINAMIID</strong><br>
+            </p>
+            <img src="assets/img/ingr-3.png" alt="" class="es-ingr__img">
+          </div>
+          <p class="es-ingr__desc">Aitab vähendada<br> tumedate<br> pigmendilaikude<br> nähtavust. Vähendab rasueritust.
+          </p>
+        </div>
+        <div class="es-ingr__single">
+          <div class="es-ingr__image">
+            <p class="es-ingr__label">
+              <strong>MANNOOS</strong><br>
+            </p>
+            <img src="assets/img/ingr-4.png" alt="" class="es-ingr__img">
+          </div>
+          <p class="es-ingr__desc">Toetab epidermise<br> taastumist ja niisutab<br> nahka.
+          </p>
+        </div>
+        <div class="es-ingr__single">
+          <div class="es-ingr__image">
+            <p class="es-ingr__label" id="ingr-padding-small">
+              <strong>AQUA POSAE<br>
+                FILIFORMIS</strong>
+            </p>
+            <img src="assets/img/ingr-5.png" alt="" class="es-ingr__img">
+          </div>
+          <p class="es-ingr__desc">Aitab püsivalt taastada<br> naha tasakaalu ja mõjub rahustavalt.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="es-effect">
+      <div class="es-effect__container">
+        <h3 class="es-effect__title">KATSETEGA TÕESTATUD<br><span>TÕHUSUS</span></h3>
+
+        <div class="es-effect__wrapper" id="effect-first-wrapper">
+          <div class="es-effect__single es-effect__single-wide">
+            <p class="es-effect__blue">8 TUNNI<br><span>MÖÖDUDES<sup>1</sup></span></p>
+            <p class="es-effect__text">
+              Ebatäiused on vähenenud, poorid vähem nähtavad ja nahk siledam.​<br>
+            </p>
+          </div>
+          <div class="es-effect__single es-effect__single-wide">
+            <p class="es-effect__blue">4 NÄDALA<br><span>JÄREL</span></p>
+            <p class="es-effect__text" id="effect-text-left">
+              <span>-66%</span> vähem komedoone<sup>2</sup>​<br>
+              <span>-44%</span> vähem vistrikke<sup>3</sup><br>
+              <span>-45%</span> vähem aknejälgi<sup>3</sup>
+            </p>
+          </div>
+        </div>
+        <div class="es-effect__wrapper">
+          <div class="es-effect__single es-effect__single-wide">
+            <p class="es-effect__percent"><span>93<sup>%</sup></span></p>
+            <p class="es-effect__item">
+              hinnangul parandab<br>
+              naha välimust<sup>4</sup>
+            </p>
+          </div>
+          <div class="es-effect__single es-effect__single-wide">
+            <p class="es-effect__percent"><span>91<sup>%</sup></span></p>
+            <p class="es-effect__item">
+              hinnangul rahustab<br>
+              kreem nahka<sup>4</sup>
+            </p>
+          </div>
+        </div>
+        <p class="es-effect__text">
+          tagab <span class="es-effect__percent"><span>24tundi</span></span> niisutust<sup>5</sup>​<br>
+
+        </p>
+      </div>
+    </div>
+
+    <div class="es-cross">
+      <h3 class="es-cross__title es-cross__title--main">TÕHUS RUTIIN <span>EFFACLAR<br> EBATÄIUST VASTU</span>
+      </h3>
+      <div class="es-cross__container">
+        <div class="es-cross__single es-cross__single--1">
+          <p class="es-cross__number">1</p>
+          <img src="assets/img/cross-1.png" alt="" class="es-cross__image">
+          <p class="es-cross__title"><span>EFFACLAR<br></span>pesugeel</p>
+          <p class="es-cross__desc">Eemaldab mustuse ja<br> liigse rasu, jättes naha<br> puhtaks ja värskeks.</p>
+          <a href="https://www.benu.ee/tooted/ilu-ja-nahahooldus/naohooldus/naopuhastus/la-roche-posay-effaclar-naopuhastusgeel-rasusele-nahale-400ml " class="es-cross__link" target="_blank">TUTVU</a>
+        </div>
+        <div class="es-cross__single  es-cross__single--2">
+          <p class="es-cross__number">2</p>
+          <img src="assets/img/cross-2.png" alt="" class="es-cross__image">
+          <p class="es-cross__title"><span>EFFACLAR </span><br>kooriv<br> toonik</p>
+          <p class="es-cross__desc">Mõjub kohe, vähendab komedoonide nähtavust,<br> reguleerib rasueritust ja<br> toimib pinguldavalt.</p>
+          <a href="https://www.benu.ee/tooted/ilu-ja-nahahooldus/naohooldus/lrp-effaclar-mikrokooriv-toonik-poore-ahendav-200ml" class="es-cross__link" target="_blank">TUTVU</a>
+        </div>
+        <div class="es-cross__single  es-cross__single--3">
+          <p class="es-cross__number">3</p>
+          <img src="assets/img/cross-3.png" alt="" class="es-cross__image">
+          <p class="es-cross__title"><span>EFFACLAR<br>
+            </span>DUO+<span>M</span></p>
+          <p class="es-cross__desc">Aitab kiiresti vabaneda ebatäiustest ehk komedoonidest ja vistrikest. Ennetab uute
+            tekkimist ja vähendab pigmendilaikude riski.</p>
+          <a href="https://www.benu.ee/tooted/ilu-ja-nahahooldus/naohooldus/lrp-effaclar-duom-naokreem-niisutav-probleemsele-nahale-40ml " class="es-cross__link" target="_blank">TUTVU</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="es-obligations">
+      <h3 class="es-obligations__title"><br class="es-mobile-break"><span>la roche-posay</span> LUBADUSED</h3>
+      <div class="es-obligations__wrapper">
+        <div class="es-obligations__single">
+          <img src="assets/img/obligations-1.png" alt="" class="es-obligations__image">
+          <p class="es-obligations__label">100% TOODETEST ON TESTITUD<br>
+            ALLERGIAOHUTUSE SEISUKOHAST</p>
+        </div>
+        <div class="es-obligations__single">
+          <img src="assets/img/obligations-2.png" alt="" class="es-obligations__image">
+          <p class="es-obligations__label">AINULT OLULISED AKTIIVSED KOOSTISOSAD
+            OPTIMAALSES KONTSENTRATSIOONIS</p>
+        </div>
+        <div class="es-obligations__single">
+          <img src="assets/img/obligations-3.png" alt="" class="es-obligations__image">
+          <p class="es-obligations__label">AJATUD KOOSTISED</p>
+        </div>
+        <div class="es-obligations__single">
+          <img src="assets/img/obligations-4.png" alt="" class="es-obligations__image">
+          <p class="es-obligations__label">TESTITUD VÄGA TUNDLIKUL NAHAL</p>
+        </div>
+      </div>
+      <div class="es-footer">
+        <p>
+          1. Tarbijakatse, 54 inimest.<br>
+          2. Kliiniline hinnang, 45 inimest, kasutamine kord päevas hommikuti.<br>
+          3. Kliiniline hinnang, 42 inimest, kasutamine kord päevas hommikuti.<br>
+          4. Tarbijakatse, 124 inimest, 4 nädalat kasutamist.<br>
+          5. Aparaadikatse.<br>
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
